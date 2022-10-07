@@ -15,34 +15,32 @@ pipeline {
       }
      stage ("Terraform init Module1") 
      {
-        steps {
-            sh '''cd Module1/
-               '''
-        }
+       
         
         steps {
+              sh '''cd Module1/
+               '''
             sh 'terraform init'
         }
      }
        stage ("Terraform Plan Module1") 
      { 
-         steps {
-            sh '''cd Module1/
-               '''
-        }
+       
         steps {
+            
+             sh '''cd Module1/
+               '''
             sh 'terraform plan'
         }
      }
        
          stage ("Terraform Apply Module1") 
      {  
-        steps {
-            sh '''cd Module1/
-               '''
-        }
+        
 
         steps {
+             sh '''cd Module1/
+               '''
             sh 'terraform apply -auto-approve'
         }
      }
