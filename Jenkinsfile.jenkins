@@ -23,16 +23,7 @@ pipeline {
             sh 'terraform init'
         }
      }
-       stage ("Terraform Plan Module1") 
-     { 
-       
-        steps {
-            
-             sh '''cd Module1/
-               '''
-            sh 'terraform plan'
-        }
-     }
+     
        
          stage ("Terraform Apply Module1") 
      {  
