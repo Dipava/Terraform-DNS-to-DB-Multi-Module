@@ -9,7 +9,7 @@ pipeline {
     stage("Git checkout Module1")
      {
         steps  {
-                git branch: 'main', url: 'https://github.com/parthac1/Terraform-DNS-to-DB-Multi-Module/tree/main/Module1'
+               git branch: 'main', url: 'https://github.com/parthac1/Terraform-DNS-to-DB-Multi-Module.git'
 
         }
       }
