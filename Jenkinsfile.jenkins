@@ -20,7 +20,7 @@ pipeline {
         steps {
               sh '''cd Module1/
                '''
-            sh 'terraform init'
+            sh 'terraform  -chdir="./Module1" init'
         }
      }
        stage ("Terraform Plan Module1") 
