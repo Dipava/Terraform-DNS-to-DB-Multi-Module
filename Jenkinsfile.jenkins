@@ -23,16 +23,23 @@ pipeline {
             sh 'terraform init'
         }
      }
-     
+       stage ("Terraform Plan Module1") 
+     { 
+       
+        steps {
+            
+             
+            sh 'terraform -chdir="./Module1" plan'
+        }
+     }
        
          stage ("Terraform Apply Module1") 
      {  
         
 
         steps {
-             sh '''cd Module1/
-               '''
-            sh 'terraform apply -auto-approve'
+            
+            sh 'terraform -chdir="./Module1" apply -auto-approve'
         }
      }
   
